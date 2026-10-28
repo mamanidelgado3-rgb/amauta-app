@@ -1,0 +1,16 @@
+AmautaDriver como app (PWA)
+
+Publicación: el repositorio amauta-app despliega esta carpeta en GitHub Pages
+automáticamente cada vez que se actualiza la rama main.
+
+URL: https://mamanidelgado3-rgb.github.io/amauta-app/
+
+Abre el enlace en el celular:
+- Android (Chrome): menú ⋮ > "Instalar app" / "Agregar a pantalla de inicio".
+- iPhone (Safari): Compartir > "Agregar a pantalla de inicio".
+
+Se abre a pantalla completa, con su ícono, y funciona sin conexión.
+El GPS y la instalación solo funcionan con HTTPS (o localhost), no al abrir el archivo directamente.
+
+Demostración: agrega #dev-admin al final de la dirección (usuario admin / admin123).
+Estas credenciales son públicas y solo sirven para esta demostración; no las uses para proteger datos reales.
