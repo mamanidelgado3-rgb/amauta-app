@@ -4,6 +4,12 @@ Publicación: el repositorio amauta-app despliega esta carpeta en GitHub Pages
 automáticamente cada vez que se actualiza la rama main.
 
 URL: https://mamanidelgado3-rgb.github.io/amauta-app/
+Descargas Android: https://github.com/mamanidelgado3-rgb/amauta-app/releases/latest
+
+Para instalar el APK descargado, permite la instalación de aplicaciones desde
+el navegador cuando Android lo solicite. La versión descargada carga la app
+desde Internet. Es una versión de demostración firmada para instalación manual,
+no una versión de Play Store. También puedes usar el enlace web como PWA.
 
 Abre el enlace en el celular:
 - Android (Chrome): menú ⋮ > "Instalar app" / "Agregar a pantalla de inicio".

@@ -1,0 +1,22 @@
+plugins {
+    id "com.android.application"
+}
+
+android {
+    namespace "pe.amauta.driver"
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "pe.amauta.driver"
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "amauta-app-${variant.versionName}-android.apk"
+        }
+    }
+}
