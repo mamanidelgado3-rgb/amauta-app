@@ -28,10 +28,31 @@ jobs:
         with:
           enablement: true
       - name: Prepare site
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: |
           mkdir _site
           cp index.html manifest.webmanifest sw.js _site/
           cp -R icons _site/icons
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          config = {
+              "url": os.environ.get("SUPABASE_URL", ""),
+              "anonKey": os.environ.get("SUPABASE_ANON_KEY", ""),
+          }
+          if not config["url"] or not config["anonKey"]:
+              print("::warning::Set SUPABASE_URL and SUPABASE_ANON_KEY in repository Actions secrets to enable account registration and login.")
+          Path("_site/config.js").write_text(
+              "window.AMAUTA_SUPABASE_CONFIG = "
+              + json.dumps(config, separators=(",", ":"))
+              + ";\n",
+              encoding="utf-8",
+          )
+          PY
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
